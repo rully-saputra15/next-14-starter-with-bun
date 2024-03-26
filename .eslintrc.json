@@ -1,3 +1,16 @@
+// https://www.lukinotes.com/2022/01/setting-up-nextjs-project-with-eslint-typescript-airbnb.html
+
 {
-  "extends": "next/core-web-vitals"
+  "extends": ["next/core-web-vitals"],
+  "parser": "@typescript-eslint/parser",
+  "rules": { "react/jsx-filename-extension": [0], "import/extensions": [0] },
+  "overrides": [
+    {
+      "files": ["*.ts", "*.tsx"],
+      "parserOptions": {
+        "project": ["./tsconfig.json"]
+      }
+    }
+  ],
+  "ignorePatterns": ["src/components/ui"]
 }
