@@ -22,6 +22,9 @@
     "*.{ts,tsx}": [
       "prettier --write",
       "eslint --max-warnings 2 ."
+    ],
+    "*.json": [
+      "prettier --write"
     ]
   },
   "devDependencies": {
